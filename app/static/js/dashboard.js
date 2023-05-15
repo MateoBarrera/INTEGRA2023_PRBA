@@ -2,6 +2,18 @@ var last_indicator_3 = ""
 var chart_element_3 = ""
 var keys_list_3 = []
 
+function checkParameters() {
+	var year_selected = document.getElementById("fecha").innerText
+	var text_process_selected = $(".process-selected").find("span").text()
+	console.log("----- check parameters -----")
+	console.log(year_selected)
+	console.log(text_process_selected)
+	if (!(year_selected === "Seleccionar") && !(text_process_selected === "Seleccionar")) {
+		ActiveSection("scenarios_2")
+		return
+	}
+}
+
 function createChartExpansion(
 	list_name,
 	indicator,
